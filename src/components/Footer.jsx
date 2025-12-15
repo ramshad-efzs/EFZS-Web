@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { FaLinkedin, FaTwitter, FaFacebook, FaEnvelope, FaPhone, FaArrowUp, FaWhatsapp, FaMapMarkerAlt, FaClock, FaShieldAlt, FaAward, FaGlobe } from 'react-icons/fa'
+import { FaLinkedin, FaInstagram, FaFacebook, FaEnvelope, FaPhone, FaArrowUp, FaWhatsapp, FaMapMarkerAlt, FaClock, FaShieldAlt, FaAward, FaGlobe } from 'react-icons/fa'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -12,6 +12,7 @@ const Footer = () => {
   const services = [
     'Free Zone Setup',
     'Mainland Setup',
+    'Freelance Visa',
     'Visa Processing',
     'Bank Account Opening',
     'Tax Registration',
@@ -48,16 +49,9 @@ const Footer = () => {
             </motion.div>
             <p className="footer-description">
               Your trusted partner for seamless business setup in UAE free zones. 
-              Over 15 years of experience helping entrepreneurs establish their presence in the UAE.
+              Over years of experience helping entrepreneurs establish their presence in the UAE.
             </p>
             <div className="footer-badges">
-              <motion.div
-                className="footer-badge"
-                whileHover={{ scale: 1.05, y: -3 }}
-              >
-                <FaAward />
-                <span>15+ Years Experience</span>
-              </motion.div>
               <motion.div
                 className="footer-badge"
                 whileHover={{ scale: 1.05, y: -3 }}
@@ -68,7 +62,7 @@ const Footer = () => {
             </div>
             <div className="social-links-modern">
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/105756232/admin/dashboard/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -79,18 +73,18 @@ const Footer = () => {
                 <FaLinkedin />
               </motion.a>
               <motion.a
-                href="https://twitter.com"
+                href="https://www.instagram.com/easyfreezonesetup/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter"
+                aria-label="Instagram"
                 whileHover={{ scale: 1.2, y: -3 }}
                 whileTap={{ scale: 0.9 }}
                 className="social-link-modern"
               >
-                <FaTwitter />
+                <FaInstagram />
               </motion.a>
               <motion.a
-                href="https://facebook.com"
+                href="https://www.facebook.com/easyfreezonesetup"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -101,7 +95,7 @@ const Footer = () => {
                 <FaFacebook />
               </motion.a>
               <motion.a
-                href="https://wa.me/971XXXXXXXXX"
+                href="https://wa.me/971554182103"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -154,6 +148,13 @@ const Footer = () => {
               </li>
               <li>
                 <motion.div whileHover={{ x: 5 }}>
+                  <Link to="/faq" className="footer-link-modern">
+                    FAQ
+                  </Link>
+                </motion.div>
+              </li>
+              <li>
+                <motion.div whileHover={{ x: 5 }}>
                   <Link to="/contact" className="footer-link-modern">
                     Contact
                   </Link>
@@ -172,15 +173,25 @@ const Footer = () => {
           >
             <h4 className="footer-heading">Our Services</h4>
             <ul className="footer-links-modern">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <motion.div whileHover={{ x: 5 }}>
-                    <Link to="/services" className="footer-link-modern">
-                      {service}
-                    </Link>
-                  </motion.div>
-                </li>
-              ))}
+              {services.map((service, index) => {
+                let servicePath = '/services'
+                if (service === 'Freelance Visa') {
+                  servicePath = '/services/freelance-visa'
+                } else if (service === 'Free Zone Setup') {
+                  servicePath = '/freezone'
+                } else if (service === 'Mainland Setup') {
+                  servicePath = '/mainland'
+                }
+                return (
+                  <li key={index}>
+                    <motion.div whileHover={{ x: 5 }}>
+                      <Link to={servicePath} className="footer-link-modern">
+                        {service}
+                      </Link>
+                    </motion.div>
+                  </li>
+                )
+              })}
             </ul>
           </motion.div>
 
@@ -218,33 +229,20 @@ const Footer = () => {
             <ul className="footer-contact-modern">
               <li>
                 <motion.a
-                  href="mailto:info@easyfreezonesetup.com"
+                  href="mailto:admin@easyfreezonesetup.com"
                   className="contact-item-modern"
                   whileHover={{ x: 5, scale: 1.02 }}
                 >
                   <FaEnvelope className="contact-icon-modern" />
                   <div>
                     <span className="contact-label">Email</span>
-                    <span className="contact-value">info@easyfreezonesetup.com</span>
+                    <span className="contact-value">admin@easyfreezonesetup.com</span>
                   </div>
                 </motion.a>
               </li>
               <li>
                 <motion.a
-                  href="tel:+971XXXXXXXXX"
-                  className="contact-item-modern"
-                  whileHover={{ x: 5, scale: 1.02 }}
-                >
-                  <FaPhone className="contact-icon-modern" />
-                  <div>
-                    <span className="contact-label">Phone</span>
-                    <span className="contact-value">+971 XX XXX XXXX</span>
-                  </div>
-                </motion.a>
-              </li>
-              <li>
-                <motion.a
-                  href="https://wa.me/971XXXXXXXXX"
+                  href="https://wa.me/971554182103"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-item-modern"
@@ -253,7 +251,7 @@ const Footer = () => {
                   <FaWhatsapp className="contact-icon-modern" />
                   <div>
                     <span className="contact-label">WhatsApp</span>
-                    <span className="contact-value">+971 XX XXX XXXX</span>
+                    <span className="contact-value">+971 55 418 2103</span>
                   </div>
                 </motion.a>
               </li>
@@ -265,7 +263,7 @@ const Footer = () => {
                   <FaMapMarkerAlt className="contact-icon-modern" />
                   <div>
                     <span className="contact-label">Address</span>
-                    <span className="contact-value">Dubai, United Arab Emirates</span>
+                    <span className="contact-value">Dubai, UAE</span>
                   </div>
                 </motion.div>
               </li>
@@ -277,7 +275,7 @@ const Footer = () => {
                   <FaClock className="contact-icon-modern" />
                   <div>
                     <span className="contact-label">Business Hours</span>
-                    <span className="contact-value">Mon-Fri: 9AM-6PM GST</span>
+                    <span className="contact-value">Mon-Fri: 9:30AM-6:30PM GST</span>
                   </div>
                 </motion.div>
               </li>

@@ -178,7 +178,7 @@ const Resources = () => {
                 <h3 className="guide-title-modern">{guide.title}</h3>
                 <p className="guide-desc-modern">{guide.desc}</p>
                 <span className="guide-type-modern">{guide.type}</span>
-                <Link to="/contact" className="btn-secondary-modern">
+                <Link to="/contact" className="btn btn-secondary">
                   Download Guide <FaArrowRight />
                 </Link>
                 <div className="guide-accent-modern"></div>

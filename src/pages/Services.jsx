@@ -100,60 +100,51 @@ const Services = () => {
               transition={{ delay: 0.2 }}
               className="hero-badge-modern"
             >
-              Services
+              SERVICES
             </motion.span>
-            <h1 className="hero-title-modern">Everything You Need<br />Under One Roof</h1>
+            <h1 className="hero-title-modern">Everything You Need Under One Roof</h1>
             <p className="hero-subtitle-modern">Complete business setup solutions from registration to growth</p>
           </motion.div>
         </div>
       </section>
 
-      <section className="section-modern">
+      <section className="section-modern services-main-section">
         <div className="container-modern">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            className="services-grid-modern-new"
+            className="services-list-modern"
           >
             {services.map((service, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="service-card-modern-new"
+                className="service-item-modern"
+                whileHover={{ x: 10 }}
               >
-                <div className="service-card-header-modern">
-                  <div className="service-number-modern">0{index + 1}</div>
-                  <div className="service-icon-wrapper-modern">
-                    <motion.div
-                      className="service-icon-modern-new"
-                      whileHover={{ rotate: 360, scale: 1.1 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      {service.icon}
-                    </motion.div>
+                <div className="service-item-header">
+                  <span className="service-number-display">0{index + 1}</span>
+                  <motion.div
+                    className="service-icon-display"
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    {service.icon}
+                  </motion.div>
+                </div>
+                <div className="service-item-content">
+                  <h3 className="service-item-title">{service.title}</h3>
+                  <p className="service-item-description">{service.description}</p>
+                  <div className="service-features-inline">
+                    {service.features.map((feature, idx) => (
+                      <span key={idx} className="feature-inline">
+                        {feature}{idx < service.features.length - 1 ? '' : ''}
+                      </span>
+                    ))}
                   </div>
                 </div>
-                <h3 className="service-title-modern">{service.title}</h3>
-                <p className="service-description-modern">{service.description}</p>
-                <div className="service-features-modern">
-                  {service.features.slice(0, 4).map((feature, idx) => (
-                    <motion.span
-                      key={idx}
-                      className="feature-badge-modern"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 + idx * 0.05 }}
-                      whileHover={{ scale: 1.1 }}
-                    >
-                      {feature}
-                    </motion.span>
-                  ))}
-                </div>
-                <div className="service-accent-modern"></div>
               </motion.div>
             ))}
           </motion.div>
@@ -220,7 +211,7 @@ const Services = () => {
             <p className="section-description-modern">Comprehensive solutions with unmatched expertise</p>
           </motion.div>
 
-          <div className="service-benefits-grid">
+          <div className="service-benefits-compact">
             {[
               { icon: <FaClock />, title: 'Fast Processing', desc: '2-3 days setup time for most free zones' },
               { icon: <FaCheckCircle />, title: '100% Compliance', desc: 'Full legal compliance guaranteed' },
@@ -231,23 +222,20 @@ const Services = () => {
             ].map((benefit, index) => (
               <motion.div
                 key={index}
-                className="service-benefit-card"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                className="service-benefit-item-compact"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10, scale: 1.02 }}
+                transition={{ delay: index * 0.05 }}
+                whileHover={{ x: 5 }}
               >
-                <motion.div
-                  className="benefit-icon"
-                  whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
-                >
+                <div className="benefit-icon-compact">
                   {benefit.icon}
-                </motion.div>
-                <h3 className="benefit-title">{benefit.title}</h3>
-                <p className="benefit-desc">{benefit.desc}</p>
-                <div className="benefit-accent"></div>
+                </div>
+                <div className="benefit-content-compact">
+                  <h3 className="benefit-title-compact">{benefit.title}</h3>
+                  <p className="benefit-desc-compact">{benefit.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -361,7 +349,7 @@ const Services = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link to="/contact" className="btn-primary-modern btn-large-modern">
+              <Link to="/contact" className="btn btn-primary btn-large">
                 Get Free Consultation <FaArrowRight />
               </Link>
             </motion.div>

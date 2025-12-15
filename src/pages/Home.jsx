@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { FaCheck, FaArrowRight, FaShieldAlt, FaClock, FaUsers, FaDollarSign, FaHeadset, FaStar, FaBuilding, FaIdCard, FaHandshake, FaGlobe, FaBriefcase, FaFileAlt, FaCalculator, FaBalanceScale } from 'react-icons/fa'
 import TestimonialCarousel from '../components/TestimonialCarousel'
+import CostCalculator from './CostCalculator'
 
 const Home = () => {
   // Actual Free Zone pricing from reference
@@ -154,7 +155,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
             >
-              <Link to="/contact" className="btn-primary-modern">
+              <Link to="/contact" className="btn btn-primary">
                 Get Started <FaArrowRight />
               </Link>
             </motion.div>
@@ -193,8 +194,8 @@ const Home = () => {
                   <span className="zone-price-label">Starting from</span>
                   <span className="zone-price-amount">AED {zone.price}</span>
                 </div>
-                <Link to="/contact" className="zone-btn-modern">
-                  Get Started <FaArrowRight />
+                <Link to="/contact" className="btn btn-primary btn-zone-card">
+                  Register my company <FaArrowRight />
                 </Link>
                 <div className="zone-accent-modern"></div>
               </motion.div>
@@ -524,6 +525,24 @@ const Home = () => {
         </div>
       </section>
 
+      {/* COST CALCULATOR */}
+      <section className="section-modern calculator-section-modern">
+        <div className="container-modern">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="section-header-modern"
+          >
+            <span className="section-label-modern">Cost Calculator</span>
+            <h2 className="section-title-modern">Get Your Instant Free Zone Setup Quote</h2>
+            <p className="section-description-modern">Calculate your business setup costs in minutes. Get a detailed quotation instantly.</p>
+          </motion.div>
+          <CostCalculator />
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="cta-section-modern">
         <div className="container-modern">
@@ -540,7 +559,7 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link to="/contact" className="btn-primary-modern btn-large-modern">
+              <Link to="/contact" className="btn btn-primary btn-large">
                 Get Started <FaArrowRight />
               </Link>
             </motion.div>

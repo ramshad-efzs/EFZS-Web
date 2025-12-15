@@ -1,47 +1,16 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaClock, FaWhatsapp, FaLinkedin, FaTwitter, FaFacebook, FaCheckCircle, FaHeadset, FaCalendar, FaGlobe } from 'react-icons/fa'
+import { FaEnvelope, FaMapMarkerAlt, FaClock, FaWhatsapp, FaLinkedin, FaInstagram, FaFacebook, FaCheckCircle, FaHeadset, FaCalendar, FaGlobe } from 'react-icons/fa'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: ''
-  })
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Thank you for your inquiry! We will get back to you soon.')
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    })
-  }
 
   const contactInfo = [
-    { icon: <FaEnvelope />, title: 'Email', content: 'info@easyfreezonesetup.com', link: 'mailto:info@easyfreezonesetup.com' },
-    { icon: <FaPhone />, title: 'Phone', content: '+971 XX XXX XXXX', link: 'tel:+971XXXXXXXXX' },
-    { icon: <FaWhatsapp />, title: 'WhatsApp', content: '+971 XX XXX XXXX', link: 'https://wa.me/971XXXXXXXXX' },
-    { icon: <FaMapMarkerAlt />, title: 'Address', content: 'Dubai, United Arab Emirates', link: null }
+    { icon: <FaEnvelope />, title: 'Email', content: 'admin@easyfreezonesetup.com', link: 'mailto:admin@easyfreezonesetup.com' },
+    { icon: <FaWhatsapp />, title: 'WhatsApp', content: '+971 55 418 2103', link: 'https://wa.me/971554182103' },
+    { icon: <FaMapMarkerAlt />, title: 'Address', content: 'Dubai, UAE', link: null }
   ]
 
   const officeLocations = [
-    { city: 'Dubai', address: 'Business Bay, Dubai, UAE', icon: <FaMapMarkerAlt /> },
-    { city: 'Abu Dhabi', address: 'Al Maryah Island, Abu Dhabi, UAE', icon: <FaMapMarkerAlt /> },
-    { city: 'Sharjah', address: 'Sharjah Media City, Sharjah, UAE', icon: <FaMapMarkerAlt /> }
+    { city: 'Dubai', address: '406, Publishing Pavillion, Dubai Production City, Dubai, UAE', icon: <FaMapMarkerAlt /> }
   ]
 
   const whyContact = [
@@ -176,7 +145,9 @@ const Contact = () => {
                 <h4 className="social-section-title">Follow Us</h4>
                 <div className="social-icons-modern">
                   <motion.a
-                    href="#"
+                    href="https://www.linkedin.com/company/105756232/admin/dashboard/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="social-icon-modern"
                     whileHover={{ scale: 1.2, y: -5 }}
                     whileTap={{ scale: 0.9 }}
@@ -184,15 +155,19 @@ const Contact = () => {
                     <FaLinkedin />
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href="https://www.instagram.com/easyfreezonesetup/?hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="social-icon-modern"
                     whileHover={{ scale: 1.2, y: -5 }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <FaTwitter />
+                    <FaInstagram />
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href="https://www.facebook.com/easyfreezonesetup"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="social-icon-modern"
                     whileHover={{ scale: 1.2, y: -5 }}
                     whileTap={{ scale: 0.9 }}
@@ -200,7 +175,9 @@ const Contact = () => {
                     <FaFacebook />
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href="https://wa.me/971554182103"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="social-icon-modern"
                     whileHover={{ scale: 1.2, y: -5 }}
                     whileTap={{ scale: 0.9 }}
@@ -222,93 +199,127 @@ const Contact = () => {
                 <h3 className="form-title-modern">Send Us a Message</h3>
                 <p className="form-subtitle-modern">Fill out the form below and we'll get back to you within 24 hours</p>
               </div>
-              <form onSubmit={handleSubmit} className="contact-form-modern">
+              <form 
+                action='https://forms.zohopublic.com/easyfreezonesetupfzcllc1/form/Contactus/formperma/E4R2i-c9Bbpj2ZEuFD3OAjiZocNhTtfhJqzri2xf_ns/htmlRecords/submit' 
+                name='form' 
+                id='form' 
+                method='POST' 
+                acceptCharset='UTF-8' 
+                encType='multipart/form-data'
+                className="contact-form-modern zoho-form"
+              >
+                <input type="hidden" name="zf_referrer_name" value="" />
+                <input type="hidden" name="zf_redirect_url" value="" />
+                <input type="hidden" name="zc_gad" value="" />
+                
                 <div className="form-group-modern">
-                  <label htmlFor="name" className="form-label-modern">Full Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                  <label htmlFor="SingleLine" className="form-label-modern">
+                    Your Name <em>*</em>
+                  </label>
+                  <input 
+                    type="text" 
+                    name="SingleLine" 
+                    id="SingleLine"
+                    fieldType="1" 
+                    maxLength="255" 
+                    placeholder="i.e. Meet Patel" 
+                    className="form-input-modern"
                     required
-                    placeholder="Enter your full name"
+                  />
+                </div>
+
+                <div className="form-group-modern">
+                  <label className="form-label-modern">
+                    Your Phone <em>*</em>
+                  </label>
+                  <div className="phone-input-wrapper">
+                    <div className="phone-code-group">
+                      <label htmlFor="international_PhoneNumber_countrycodeval" className="phone-label-small">Code</label>
+                      <input 
+                        type="text" 
+                        compName="PhoneNumber_countrycodeval" 
+                        name="PhoneNumber_countrycodeval" 
+                        phoneFormat="1" 
+                        maxLength="10" 
+                        id="international_PhoneNumber_countrycodeval" 
+                        placeholder=""
+                        className="form-input-modern phone-code"
+                      />
+                    </div>
+                    <div className="phone-number-group">
+                      <label htmlFor="international_PhoneNumber_countrycode" className="phone-label-small">Number</label>
+                      <input 
+                        type="text" 
+                        compName="PhoneNumber" 
+                        name="PhoneNumber_countrycode" 
+                        phoneFormat="1" 
+                        isCountryCodeEnabled="true" 
+                        maxLength="20" 
+                        value="" 
+                        fieldType="11" 
+                        id="international_PhoneNumber_countrycode" 
+                        placeholder=""
+                        className="form-input-modern phone-number"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="form-group-modern">
+                  <label htmlFor="Email" className="form-label-modern">Your Email</label>
+                  <input 
+                    type="email" 
+                    maxLength="255" 
+                    name="Email" 
+                    id="Email"
+                    value="" 
+                    fieldType="9" 
+                    placeholder="i.e. email@yourdomain.com" 
                     className="form-input-modern"
                   />
                 </div>
 
-                <div className="form-row-modern">
-                  <div className="form-group-modern">
-                    <label htmlFor="email" className="form-label-modern">Email Address</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      placeholder="Enter your email"
-                      className="form-input-modern"
-                    />
-                  </div>
-
-                  <div className="form-group-modern">
-                    <label htmlFor="phone" className="form-label-modern">Phone Number</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                      placeholder="Enter your phone"
-                      className="form-input-modern"
-                    />
-                  </div>
-                </div>
-
                 <div className="form-group-modern">
-                  <label htmlFor="service" className="form-label-modern">Service Interested In</label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    required
+                  <label htmlFor="Dropdown" className="form-label-modern">
+                    Services interested in <em>*</em>
+                  </label>
+                  <select 
+                    name="Dropdown" 
+                    id="Dropdown"
                     className="form-input-modern form-select-modern"
+                    required
                   >
-                    <option value="">Select a service</option>
-                    <option value="free-zone-setup">Free Zone Business Setup</option>
-                    <option value="mainland-setup">Mainland Business Setup</option>
-                    <option value="visa-processing">Visa Processing</option>
-                    <option value="bank-account">Bank Account Opening</option>
-                    <option value="tax-registration">Tax Registration & Filing</option>
-                    <option value="bookkeeping">Bookkeeping Services</option>
-                    <option value="consulting">Business Consulting</option>
+                    <option selected="true" value="-Select-">-Select-</option>
+                    <option value="UAE Free Zone Business Setup">UAE Free Zone Business Setup</option>
+                    <option value="UAE Mainland Business Setup">UAE Mainland Business Setup</option>
+                    <option value="Resident Visa Processing">Resident Visa Processing</option>
+                    <option value="Bank Account Opening">Bank Account Opening</option>
                   </select>
                 </div>
 
                 <div className="form-group-modern">
-                  <label htmlFor="message" className="form-label-modern">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows="6"
+                  <label htmlFor="MultiLine" className="form-label-modern">
+                    Your Message <em>*</em>
+                  </label>
+                  <textarea 
+                    name="MultiLine" 
+                    id="MultiLine"
+                    maxLength="65535" 
                     placeholder="Tell us about your requirements and we'll provide a customized solution..."
                     className="form-input-modern form-textarea-modern"
+                    rows="6"
+                    required
                   ></textarea>
                 </div>
 
                 <motion.button
                   type="submit"
-                  className="btn-submit-modern"
+                  className="btn btn-primary"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <FaPaperPlane /> <span>Send Message</span>
+                  <span>Submit</span>
                 </motion.button>
               </form>
             </motion.div>
@@ -407,15 +418,7 @@ const Contact = () => {
               <div className="hours-list">
                 <div className="hours-item">
                   <span className="hours-day">Monday - Friday</span>
-                  <span className="hours-time">9:00 AM - 6:00 PM GST</span>
-                </div>
-                <div className="hours-item">
-                  <span className="hours-day">Saturday</span>
-                  <span className="hours-time">10:00 AM - 4:00 PM GST</span>
-                </div>
-                <div className="hours-item">
-                  <span className="hours-day">Sunday</span>
-                  <span className="hours-time">Closed</span>
+                  <span className="hours-time">9:30 AM - 6:30 PM GST</span>
                 </div>
               </div>
               <p className="hours-note">24/7 support available via WhatsApp and email</p>
