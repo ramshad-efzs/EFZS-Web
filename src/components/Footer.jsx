@@ -44,7 +44,7 @@ const Footer = () => {
               className="footer-logo-wrapper"
             >
               <Link to="/">
-                <img src="/efsz logo.png" alt="Easy Free Zone Setup" className="footer-logo-modern" />
+                <img src="/efzslogo.png" alt="Easy Free Zone Setup" className="footer-logo-modern" />
               </Link>
             </motion.div>
             <p className="footer-description">

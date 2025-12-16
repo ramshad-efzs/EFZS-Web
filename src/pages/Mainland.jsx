@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { FaArrowLeft, FaArrowRight, FaCheckCircle, FaStar, FaBuilding, FaShieldAlt, FaClock, FaGlobe, FaBriefcase, FaUsers, FaRocket, FaIdCard, FaHandshake, FaFileContract, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa'
+import { FaArrowRight, FaCheckCircle, FaStar, FaBuilding, FaShieldAlt, FaClock, FaGlobe, FaBriefcase, FaUsers, FaRocket, FaIdCard, FaHandshake, FaFileContract, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa'
 
 const Mainland = () => {
   const heroHighlights = [
@@ -176,10 +176,6 @@ const Mainland = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Link to="/" className="back-to-home-link">
-                <FaArrowLeft /> Back to Home
-              </Link>
-              <span className="hero-badge-modern">Mainland</span>
               <h1 className="setup-hero-title">UAE Mainland Company Formation</h1>
               <p className="setup-hero-subtitle">
                 Build a domestic footprint, win government contracts, and unlock local credibility with a full-stack launch team.

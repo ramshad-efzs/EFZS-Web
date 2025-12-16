@@ -10,7 +10,7 @@ const Services = () => {
   ]
 
   const heroStats = [
-    { value: '2000+', label: 'Launches delivered' },
+    { value: '100+', label: 'Launches delivered' },
     { value: '24/7', label: 'Advisor support' },
     { value: 'One team', label: 'Licensing • Visas • Banking' }
   ]

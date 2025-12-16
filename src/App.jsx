@@ -8,6 +8,7 @@ import Services from './pages/Services'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Resources from './pages/Resources'
+import Guides from './pages/Guides'
 import FAQ from './pages/FAQ'
 import FreelanceVisa from './pages/FreelanceVisa'
 import FreeZone from './pages/FreeZone'
@@ -25,6 +26,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/resources" element={<Resources />} />
+            <Route path="/guides" element={<Guides />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/services/freelance-visa" element={<FreelanceVisa />} />

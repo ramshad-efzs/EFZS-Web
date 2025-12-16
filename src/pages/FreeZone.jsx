@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { FaArrowLeft, FaArrowRight, FaCheckCircle, FaStar, FaBuilding, FaShieldAlt, FaClock, FaGlobe, FaBriefcase, FaUsers, FaRocket, FaIdCard, FaWhatsapp } from 'react-icons/fa'
+import { FaArrowRight, FaCheckCircle, FaStar, FaBuilding, FaShieldAlt, FaClock, FaGlobe, FaBriefcase, FaUsers, FaRocket, FaIdCard, FaWhatsapp } from 'react-icons/fa'
 
 const FreeZone = () => {
   const heroHighlights = [
@@ -11,7 +11,7 @@ const FreeZone = () => {
 
   const heroStats = [
     { value: '3-5 days', label: 'Typical license timeline' },
-    { value: '2000+', label: 'Companies launched' },
+    { value: '100+', label: 'Companies launched' },
     { value: 'End-to-end', label: 'Licensing • Visas • Banking' }
   ]
 
@@ -203,10 +203,6 @@ const FreeZone = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Link to="/" className="back-to-home-link">
-                <FaArrowLeft /> Back to Home
-              </Link>
-              <span className="hero-badge-modern">Free Zone</span>
               <h1 className="setup-hero-title">UAE Free Zone Business Setup</h1>
               <p className="setup-hero-subtitle">
                 Select the right jurisdiction, get transparent costs, and launch quickly with our licensing, visa, and banking specialists.

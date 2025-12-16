@@ -42,7 +42,7 @@ const Navigation = () => {
 
   const resourcesItems = [
     { path: '/resources', label: 'Blog' },
-    { path: '/resources', label: 'Guides' },
+    { path: '/guides', label: 'Guides' },
     { path: '/faq', label: 'FAQs' },
   ]
 
@@ -56,7 +56,7 @@ const Navigation = () => {
   }
 
   const isServicesActive = servicesItems.some(item => location.pathname === item.path)
-  const isResourcesActive = resourcesItems.some(item => location.pathname === item.path)
+  const isResourcesActive = resourcesItems.some(item => location.pathname === item.path) || location.pathname === '/guides'
 
   return (
     <motion.nav
@@ -71,7 +71,7 @@ const Navigation = () => {
           whileTap={{ scale: 0.95 }}
         >
           <Link to="/" className="nav-logo-modern">
-            <img src="/efsz logo.png" alt="Easy Free Zone Setup" className="logo-image-modern" />
+            <img src="/efzslogo.png" alt="Easy Free Zone Setup" className="logo-image-modern" />
           </Link>
         </motion.div>
 

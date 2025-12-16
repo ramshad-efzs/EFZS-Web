@@ -147,7 +147,7 @@ const CostCalculator = () => {
           resolve({ data: imgData, width: img.width, height: img.height })
         }
         img.onerror = reject
-        img.src = '/efsz logo.png'
+        img.src = '/efzslogo.png'
         setTimeout(() => reject(new Error('Logo load timeout')), 5000)
       })
 

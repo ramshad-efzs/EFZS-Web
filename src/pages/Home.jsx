@@ -118,12 +118,15 @@ const Home = () => {
             >
               🇦🇪 #1 Trusted UAE Business Setup Partner
             </motion.span>
-            <h1 className="hero-title-modern">Setup Your Business in UAE?</h1>
+            <h1 className="hero-title-modern">
+              Setup Your Business in UAE?<br />
+              <span>We Make It Simple & Fast</span>
+            </h1>
             <p className="hero-subtitle-modern">
               Get the best free zone options tailored to your business with 100% transparency
             </p>
             <p className="hero-desc-modern">
-              Professional UAE business setup services with guaranteed results and 100% legal compliance
+              Professional UAE business setup services with guaranteed results and 100% legal compliance. Join thousands of successful entrepreneurs who chose us for their UAE business setup.
             </p>
             
             <div className="hero-badges-modern">

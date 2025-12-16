@@ -23,7 +23,7 @@ const About = () => {
   ]
 
   const heroStats = [
-    { value: '1,200+', label: 'Company launches delivered' },
+    { value: '100+', label: 'Company launches delivered' },
     { value: '3-5 days', label: 'Average license timeline' },
     { value: '4.9/5', label: 'Client satisfaction' }
   ]

@@ -119,10 +119,6 @@ const FreelanceVisa = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Link to="/" className="back-to-home-link">
-                ← Back to Home
-              </Link>
-              <span className="hero-badge-modern">Freelance Visa</span>
               <h1 className="setup-hero-title">Free Zone Freelance Visa</h1>
               <p className="setup-hero-subtitle">
                 Launch your UAE freelance career with a compliant license, 2-year visa, and residency support—all without an office.
